@@ -1,0 +1,6 @@
+Build Wit Purpose deployment package
+
+Public site root: deploy/index.html
+Do not publish the project root unless you also want the private 100 Committed dashboard online.
+For GitHub Pages, upload the contents of deploy/ to a public repository.
+For Netlify Drop, upload build-wit-purpose-site.zip or drag the deploy folder.

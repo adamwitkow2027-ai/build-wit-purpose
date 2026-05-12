@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build Wit Purpose — Adam Witkowski</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0a0e1a;
+    --navy-mid: #111827;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #fdf3dc;
+    --white: #ffffff;
+    --off-white: #f5f3ee;
+    --gray-light: #e8e6e1;
+    --gray-mid: #9ca3af;
+    --text-dark: #1a1a2e;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  /* ===== FLYER PAGE ===== */
+  .flyer {
+    width: 850px;
+    min-height: 1100px;
+    margin: 0 auto 60px;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flyer-hero {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+  }
+
+  .flyer-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10,14,26,0.15) 0%, rgba(10,14,26,0.85) 100%);
+  }
+
+  .hero-brand {
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .brand-icon {
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10,14,26,0.7);
+  }
+
+  .brand-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: var(--gold);
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .brand-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  .hero-cjva {
+    position: absolute;
+    top: 36px;
+    right: 40px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  .hero-bottom {
+    position: absolute;
+    bottom: 36px;
+    left: 40px;
+    right: 40px;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: var(--white);
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .hero-title span {
+    color: var(--gold);
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  /* ===== FLYER BODY ===== */
+  .flyer-body {
+    flex: 1;
+    padding: 44px 40px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .flyer-left { display: flex; flex-direction: column; gap: 28px; }
+  .flyer-right { display: flex; flex-direction: column; gap: 24px; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .flyer-bio {
+    color: rgba(255,255,255,0.82);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .credential-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .credential-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: rgba(255,255,255,0.8);
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  .cred-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .what-you-get {
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 6px;
+    padding: 20px;
+  }
+
+  .what-you-get-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+
+  .get-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.82);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .get-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 22px;
+  }
+
+  .price-block {
+    background: var(--gold);
+    border-radius: 6px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+
+  .price-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(10,14,26,0.65);
+    margin-bottom: 6px;
+  }
+
+  .price-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  .price-per {
+    font-size: 12px;
+    color: rgba(10,14,26,0.65);
+    margin-top: 4px;
+  }
+
+  .price-note {
+    font-size: 11px;
+    color: rgba(10,14,26,0.55);
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  .cta-block {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 18px 20px;
+  }
+
+  .cta-block p {
+    color: rgba(255,255,255,0.7);
+    font-size: 12.5px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .cta-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .cta-tiktok {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+
+  .cta-handle {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .flyer-footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-left {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 1px;
+  }
+
+  .footer-gold {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+
+  /* ===== WEBSITE BIO SECTION ===== */
+  .website-section {
+    width: 850px;
+    margin: 0 auto 40px;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+  }
+
+  .web-header {
+    background: var(--navy);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .web-header-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+
+  .web-header-tag {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .web-body {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0;
+  }
+
+  .web-sidebar {
+    background: var(--navy-mid);
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .web-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid var(--gold);
+  }
+
+  .web-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  .web-title {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .web-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(201,168,76,0.4);
+  }
+
+  .web-stat {
+    text-align: center;
+    width: 100%;
+  }
+
+  .web-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+
+  .web-stat-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  .web-stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .web-cert {
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 6px;
+    padding: 10px 12px;
+    width: 100%;
+  }
+
+  .web-cert-label {
+    font-size: 9px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  .web-cert-text {
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.4;
+  }
+
+  .web-content {
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .web-section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .web-bio-text {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.8;
+  }
+
+  .web-bio-text strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .web-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .web-tag {
+    background: var(--gold-pale);
+    color: #7a5c1e;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(201,168,76,0.3);
+  }
+
+  .web-quote {
+    border-left: 3px solid var(--gold);
+    padding-left: 18px;
+    margin: 4px 0;
+  }
+
+  .web-quote p {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  .web-cta {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .web-cta-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.5;
+  }
+
+  .web-cta-text strong {
+    color: var(--gold);
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .web-cta-btn {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    border-radius: 4px;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .page-label {
+    width: 850px;
+    margin: 0 auto 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    padding: 0 4px;
+  }
+
+  .page-wrapper {
+    padding: 48px 24px 60px;
+    background: var(--off-white);
+    min-height: 100vh;
+  }
+
+  .page-title {
+    width: 850px;
+    margin: 0 auto 48px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .page-title h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--navy);
+    letter-spacing: 2px;
+  }
+
+  .page-title span {
+    font-size: 13px;
+    color: var(--gray-mid);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="page-title">
+    <h1>Build Wit Purpose</h1>
+    <span>— Private Lesson Materials for Adam Witkowski</span>
+  </div>
+
+  <!-- FLYER -->
+  <div class="page-label">Printable Flyer</div>
+  <div class="flyer">
+
+    <div class="flyer-hero">
+      <img src="assets/volleyball-serve.jpeg" alt="Adam Witkowski serving" />
+      <div class="hero-overlay"></div>
+
+      <div class="hero-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 7l9 5 9-5-9-5zM3 17l9 5 9-5M3 12l9 5 9-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">Build Wit Purpose</div>
+          <div class="brand-sub">Private Volleyball Training</div>
+        </div>
+      </div>
+
+      <div class="hero-cjva">Hosted at CJVA · East Hanover, NJ</div>
+
+      <div class="hero-bottom">
+        <div class="hero-title">TRAIN<br><span>SMARTER.</span><br>GET STRONGER.</div>
+        <div class="hero-subtitle">Private Lessons with Adam Witkowski · Volleyball Athlete · Pre-DPT</div>
+      </div>
+    </div>
+
+    <div class="flyer-body">
+      <div class="flyer-left">
+        <div>
+          <div class="section-label">About Your Coach</div>
+          <p class="flyer-bio">
+            I'm Adam Witkowski — a volleyball athlete, Pre-DPT student, and coach at CJVA. I've been playing volleyball for 8+ years across club, high school, and collegiate environments, and I bring both the technical skill and the health science knowledge to help you get genuinely better — not just at volleyball, but as an athlete.
+          </p>
+          <br>
+          <p class="flyer-bio">
+            I've spent 4 years on mission trips across Africa and Costa Rica, where I learned firsthand that growth happens when someone invests in you. That's the energy I bring to every session.
+          </p>
+        </div>
+
+        <div>
+          <div class="section-label">Credentials</div>
+          <ul class="credential-list">
+            <li><span class="cred-dot"></span>Volleyball athlete — libero background</li>
+            <li><span class="cred-dot"></span>8+ years across club, high school & collegiate volleyball</li>
+            <li><span class="cred-dot"></span>Pre-Physical Therapy student — movement & injury prevention</li>
+            <li><span class="cred-dot"></span>CPR/AED Certified (Child & Infant) — Yale New Haven Hospital</li>
+            <li><span class="cred-dot"></span>CJVA Coach — Youth Development & Beach Programs</li>
+            <li><span class="cred-dot"></span>Boy Scouts of America — Eagle Scout leadership training</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flyer-right">
+        <div class="what-you-get">
+          <div class="what-you-get-title">What You Get in a Session</div>
+          <div class="get-item">
+            <div class="get-num">01</div>
+            <div>Skill breakdown built around <em>your</em> game — defensive reading, passing, serve mechanics, and more</div>
+          </div>
+          <div class="get-item">
+            <div class="get-num">02</div>
+            <div>Movement & athleticism training informed by health science — mobility, stability, and injury prevention</div>
+          </div>
+          <div class="get-item">
+            <div class="get-num">03</div>
+            <div>Specialized athlete advantage — if you play one sport, we'll make you stronger, faster, and more athletic than peers who do too</div>
+          </div>
+          <div class="get-item">
+            <div class="get-num">04</div>
+            <div>A coach who sees <em>you</em>, not just a roster spot — every session is built around your individual learning style</div>
+          </div>
+        </div>
+
+        <div class="price-block">
+          <div class="price-label">Private Lesson Rate</div>
+          <div class="price-amount">$95</div>
+          <div class="price-per">per athlete · 1 hour · court time included</div>
+          <div class="price-note">Hosted at CJVA East Hanover · Booking through CJVA</div>
+        </div>
+
+        <div class="cta-block">
+          <p>Ready to build wit purpose? Reach out to book your session or learn more about what we'll work on together.</p>
+          <div class="cta-social">
+            <div>
+              <div class="cta-tiktok">@rollwitme</div>
+              <div class="cta-handle">TikTok · Follow for training content</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flyer-footer">
+      <div class="footer-left">CJVA · 149 Ridgedale Ave, East Hanover, NJ 07936 · www.cjva.org</div>
+      <div class="footer-gold">BUILD WIT PURPOSE</div>
+    </div>
+
+  </div>
+
+  <!-- WEBSITE BIO -->
+  <div class="page-label" style="margin-top: 16px;">Website Bio Section</div>
+  <div class="website-section">
+
+    <div class="web-header">
+      <div class="web-header-brand">Build Wit Purpose</div>
+      <div class="web-header-tag">Your Coach</div>
+    </div>
+
+    <div class="web-body">
+      <div class="web-sidebar">
+        <img src="assets/adam-headshot.jpg" alt="Adam Witkowski" class="web-photo" />
+        <div class="web-name">Adam<br>Witkowski</div>
+        <div class="web-title">Volleyball Athlete · Pre-DPT</div>
+        <div class="web-divider"></div>
+        <div class="web-stats-row">
+          <div class="web-stat">
+            <div class="web-stat-num">8+</div>
+            <div class="web-stat-label">Years Playing</div>
+          </div>
+          <div class="web-stat">
+            <div class="web-stat-num">5+</div>
+            <div class="web-stat-label">Yrs Beach VB</div>
+          </div>
+          <div class="web-stat">
+            <div class="web-stat-num">4</div>
+            <div class="web-stat-label">Mission Trips</div>
+          </div>
+          <div class="web-stat">
+            <div class="web-stat-num">3</div>
+            <div class="web-stat-label">Levels Played</div>
+          </div>
+        </div>
+        <div class="web-divider"></div>
+        <div class="web-cert">
+          <div class="web-cert-label">Certified</div>
+          <div class="web-cert-text">CPR/AED · Child & Infant<br>Yale New Haven Hospital · 2025</div>
+        </div>
+        <div class="web-cert">
+          <div class="web-cert-label">TikTok</div>
+          <div class="web-cert-text">@rollwitme<br>Training content & updates</div>
+        </div>
+      </div>
+
+      <div class="web-content">
+        <div>
+          <div class="web-section-title">About</div>
+          <p class="web-bio-text">
+            I'm Adam Witkowski — a volleyball athlete, <strong>Pre-DPT student</strong>, and CJVA coach. I've been playing volleyball for over 8 years across club, high school, and collegiate environments, and I started right here at CJVA — where a college student coaching a summer camp taught me my first topspin serve and changed the way I thought about the game. That moment is exactly why I came back to coach.
+          </p>
+        </div>
+
+        <div class="web-quote">
+          <p>"I believe that growth happens one small step at a time. My dad always said — how do you eat an elephant? One bite at a time. That's how I coach."</p>
+        </div>
+
+        <div>
+          <div class="web-section-title">What Makes This Different</div>
+          <p class="web-bio-text">
+            As a pre-PT student, I don't just coach volleyball — I bring an understanding of <strong>how the body moves, recovers, and gets stronger</strong>. If your athlete is already specializing in one sport, that's actually an advantage in my sessions. We'll use that foundation to build athleticism, stability, and mobility that makes them stand out against peers. Sessions are structured around your individual learning style — some athletes need a visual, some need reps, some need a conversation. I adjust to you.
+          </p>
+        </div>
+
+        <div>
+          <div class="web-section-title">Focus Areas</div>
+          <div class="web-tags">
+            <span class="web-tag">Defensive Reading</span>
+            <span class="web-tag">Passing Technique</span>
+            <span class="web-tag">Topspin Serve</span>
+            <span class="web-tag">Float Serve</span>
+            <span class="web-tag">Movement & Athleticism</span>
+            <span class="web-tag">Injury Prevention</span>
+            <span class="web-tag">Sport Specialization Support</span>
+            <span class="web-tag">Mental Toughness</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="web-section-title">Beyond the Court</div>
+          <p class="web-bio-text">
+            Over the past 4 years I've had the privilege of traveling the world on mission trips — from working with kids in Africa to meeting 94-year-olds dancing in Costa Rica's Blue Zones. Those experiences shaped how I see people and how I show up as a coach. I believe that <strong>the connection between a coach and an athlete is what makes the skill stick</strong>. I'm not just here to run drills. I'm here to invest in you.
+          </p>
+        </div>
+
+        <div class="web-cta">
+          <div class="web-cta-text">
+            <strong>Book a Private Lesson — $95</strong>
+            1-hour session with court time included · Hosted at CJVA East Hanover
+          </div>
+          <button class="web-cta-btn">Book via CJVA</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

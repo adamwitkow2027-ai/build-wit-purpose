@@ -1,0 +1,469 @@
+:root {
+  color-scheme: light;
+  --navy: #0a0e1a;
+  --navy-soft: #111827;
+  --gold: #c9a84c;
+  --gold-light: #f3dfad;
+  --paper: #f5f3ee;
+  --white: #ffffff;
+  --ink: #101624;
+  --muted: #66707c;
+  --line: #e2ded5;
+  --wood: #9b5528;
+  --pink: #d93a88;
+  --shadow: 0 22px 60px rgba(10, 14, 26, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px clamp(16px, 4vw, 44px);
+  background: rgba(10, 14, 26, 0.94);
+  color: var(--white);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand small {
+  color: rgba(255, 255, 255, 0.62);
+  margin-top: 2px;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3vw, 28px);
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 800;
+}
+
+.site-header nav a:hover {
+  color: var(--gold-light);
+}
+
+.hero {
+  min-height: 82svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  align-items: end;
+  gap: 24px;
+  padding: clamp(28px, 6vw, 72px);
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(10, 14, 26, 0.96), rgba(10, 14, 26, 0.42)),
+    url("../public/assets/volleyball-serve.jpeg");
+  background-size: cover;
+  background-position: center 28%;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 840px;
+  margin: 10px 0 14px;
+  font-size: clamp(3.5rem, 13vw, 9rem);
+  line-height: 0.86;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero p {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.button.primary {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.button.secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.hero-note {
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  background: rgba(10, 14, 26, 0.52);
+  backdrop-filter: blur(12px);
+}
+
+.hero-note span,
+.hero-note p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-note strong {
+  display: block;
+  margin: 8px 0;
+  color: var(--gold);
+  font-size: clamp(3rem, 8vw, 5.2rem);
+  line-height: 1;
+}
+
+.value-band {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.value-band strong {
+  min-height: 118px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: var(--white);
+  color: var(--navy);
+  font-size: clamp(1.35rem, 4vw, 3rem);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.value-band strong:nth-child(2) {
+  background: var(--gold);
+}
+
+.split-section,
+.photo-story,
+.coach-section,
+.schedule-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(18px, 4vw, 42px);
+  padding: clamp(42px, 7vw, 86px) clamp(16px, 5vw, 72px);
+}
+
+.section-copy h2,
+.photo-story h2,
+.coach-copy h2,
+.schedule-copy h2 {
+  margin: 8px 0 14px;
+  max-width: 680px;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: 0.96;
+}
+
+.section-copy p,
+.photo-story p,
+.coach-copy p,
+.schedule-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1.06rem;
+}
+
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.step-grid article {
+  min-height: 245px;
+  padding: 22px;
+  border-radius: 8px;
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.step-grid span {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.step-grid h3 {
+  margin: 26px 0 10px;
+  font-size: 1.7rem;
+}
+
+.step-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+}
+
+.photo-story {
+  background: var(--white);
+  align-items: stretch;
+}
+
+.photo-story img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.photo-story ul {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.photo-story li {
+  padding: 14px 16px;
+  border-left: 4px solid var(--gold);
+  background: var(--paper);
+  border-radius: 0 8px 8px 0;
+  font-weight: 800;
+}
+
+.coach-section {
+  align-items: center;
+}
+
+.coach-photo img {
+  width: min(420px, 100%);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.cred-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.cred-list span {
+  padding: 9px 12px;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 999px;
+  background: #fbf2d9;
+  color: #765c1f;
+  font-weight: 800;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 clamp(16px, 5vw, 72px) clamp(42px, 7vw, 86px);
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.gallery img:nth-child(2) {
+  object-position: center 18%;
+}
+
+.gallery img:nth-child(4) {
+  object-position: center 32%;
+}
+
+.schedule-section {
+  background: var(--navy);
+  color: var(--white);
+  align-items: start;
+}
+
+.schedule-copy p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.email-link {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--gold-light);
+  font-weight: 900;
+}
+
+.lesson-form {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.lesson-form label {
+  display: grid;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 800;
+}
+
+.lesson-form input,
+.lesson-form textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  padding: 12px;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px clamp(16px, 5vw, 72px);
+  background: #060912;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.site-footer strong {
+  color: var(--gold);
+}
+
+@media (max-width: 940px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero,
+  .split-section,
+  .photo-story,
+  .coach-section,
+  .schedule-section {
+    grid-template-columns: 1fr;
+  }
+
+  .step-grid,
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .value-band {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    min-height: 78svh;
+    padding: 28px 16px;
+  }
+
+  .hero-actions,
+  .site-footer {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .step-grid,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-story img {
+    min-height: 420px;
+  }
+}

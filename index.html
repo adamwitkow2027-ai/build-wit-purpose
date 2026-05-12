@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Build Wit Purpose private volleyball coaching with Adam Witkowski at CJVA."
+    />
+    <title>Build Wit Purpose | Private Volleyball Coaching</title>
+    <link rel="stylesheet" href="./src/volleyball-landing.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Build Wit Purpose home">
+        <span class="brand-mark">BW</span>
+        <span>
+          <strong>Build Wit Purpose</strong>
+          <small>Private Volleyball Training</small>
+        </span>
+      </a>
+      <nav aria-label="Landing page navigation">
+        <a href="#training">Training</a>
+        <a href="#coach">Coach</a>
+        <a href="#schedule">Schedule</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-content">
+          <span class="eyebrow">CJVA Private Lessons · East Hanover, NJ</span>
+          <h1>Build Wit Purpose</h1>
+          <p>
+            Private volleyball coaching for athletes who want sharper fundamentals,
+            stronger movement, and clear feedback they can take back into practice.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#schedule">Request a lesson</a>
+            <a class="button secondary" href="./public/build-wit-purpose.html" target="_blank" rel="noreferrer">
+              View flyer
+            </a>
+          </div>
+        </div>
+        <aside class="hero-note" aria-label="Lesson snapshot">
+          <span>Private Lesson Rate</span>
+          <strong>$95</strong>
+          <p>1 hour · court time included · booking through CJVA</p>
+        </aside>
+      </section>
+
+      <section class="value-band" aria-label="Training pillars">
+        <strong>Fundamentals</strong>
+        <strong>Athleticism</strong>
+        <strong>Confidence</strong>
+      </section>
+
+      <section id="training" class="split-section">
+        <div class="section-copy">
+          <span class="eyebrow">Training approach</span>
+          <h2>Better reps, not random reps.</h2>
+          <p>
+            Every session starts with what the athlete actually needs. From there,
+            training moves through targeted teaching, high-quality repetition, and
+            feedback that makes the next rep clearer.
+          </p>
+        </div>
+        <div class="step-grid">
+          <article>
+            <span>01</span>
+            <h3>Evaluate</h3>
+            <p>Identify current skill needs, movement habits, confidence gaps, and goals.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Train</h3>
+            <p>Use focused technical reps, athletic progressions, and simple cues that stick.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Apply</h3>
+            <p>Connect technique to game-speed reads, communication, and pressure moments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="photo-story">
+        <img src="./public/assets/volleyball-attack.jpeg" alt="Adam attacking a volleyball" />
+        <div>
+          <span class="eyebrow">Focus areas</span>
+          <h2>Skill work connected to athletic movement.</h2>
+          <ul>
+            <li>Passing, serve receive, defensive reading, and libero habits</li>
+            <li>Serving mechanics, footwork, platform angles, and controlled reps</li>
+            <li>Jump mechanics, landing control, plyometrics, and change of direction</li>
+            <li>Tryout preparation, confidence, communication, and coachability</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="coach" class="coach-section">
+        <div class="coach-photo">
+          <img src="./public/assets/adam-headshot.jpg" alt="Adam Witkowski headshot" />
+        </div>
+        <div class="coach-copy">
+          <span class="eyebrow">Your coach</span>
+          <h2>Adam Witkowski</h2>
+          <p>
+            Adam is a CJVA coach, volleyball athlete with a libero background, and
+            Pre-DPT student. His sessions combine technical volleyball instruction
+            with an understanding of how athletes move, build strength, and stay durable.
+          </p>
+          <div class="cred-list">
+            <span>8+ years volleyball experience</span>
+            <span>CJVA youth development and beach programs</span>
+            <span>Pre-DPT movement and injury-prevention foundation</span>
+            <span>CPR/AED certified</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" aria-label="Volleyball photo gallery">
+        <img src="./public/assets/volleyball-serve.jpeg" alt="Adam serving a volleyball" />
+        <img src="./public/assets/volleyball-ready.jpeg" alt="Adam ready near the net" />
+        <img src="./public/assets/volleyball-team.jpeg" alt="Adam with a teammate" />
+        <img src="./public/assets/volleyball-connect.jpeg" alt="Adam talking on court" />
+      </section>
+
+      <section id="schedule" class="schedule-section">
+        <div class="schedule-copy">
+          <span class="eyebrow">Request availability</span>
+          <h2>Ask about private lesson slots.</h2>
+          <p>
+            Send the athlete's age, position, current level, and what they want to improve.
+            The form opens an email draft so you can review it before sending.
+          </p>
+          <a class="email-link" href="mailto:adamwitkow2027@gmail.com">adamwitkow2027@gmail.com</a>
+        </div>
+        <form class="lesson-form" id="lesson-form">
+          <label>
+            Athlete name
+            <input name="athlete" autocomplete="name" required />
+          </label>
+          <label>
+            Age / grade
+            <input name="age" required />
+          </label>
+          <label>
+            Position or focus
+            <input name="position" placeholder="Libero, setter, serving, tryout prep..." />
+          </label>
+          <label>
+            What should we work on?
+            <textarea name="goals" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Create lesson request</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>Build Wit Purpose</strong>
+      <span>CJVA private volleyball training · East Hanover, NJ</span>
+    </footer>
+
+    <script src="./src/volleyball-landing.js"></script>
+  </body>
+</html>
