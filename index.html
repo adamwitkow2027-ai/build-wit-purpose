@@ -1700,6 +1700,247 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  .direct-contact-card a[href="mailto:adamwitkow2027@gmail.com"],
+  .direct-contact-card a[href="mailto:adamwitow2027@gmail.com"] {
+    background-color: #C9A84C;
+    color: #0a0e1a;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 16px;
+  }
+
+  .value-section {
+    padding: 60px 20px;
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card:nth-child(1) .value-body,
+  .value-card:nth-child(2) .value-body,
+  .value-card:nth-child(3) .value-body,
+  .value-card:nth-child(4) .value-body,
+  .value-card:nth-child(5) .value-body,
+  .value-card:nth-child(6) .value-body {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .value-card .value-body::after {
+    display: block;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .value-card:nth-child(1) .value-body::after {
+    content: 'A written summary of what we covered and what to practice before next time.';
+  }
+
+  .value-card:nth-child(2) .value-body::after {
+    content: 'I learn your game, goals, and learning style before you step on the court.';
+  }
+
+  .value-card:nth-child(3) .value-body::after {
+    content: 'A shared doc showing your skill growth session by session — visible to you and your parents.';
+  }
+
+  .value-card:nth-child(4) .value-body::after {
+    content: 'Pre-PT level screening for injury risk built into every session at no extra cost.';
+  }
+
+  .value-card:nth-child(5) .value-body::after {
+    content: "I'm actively competing at Quinnipiac — you get current, real knowledge, not memory.";
+  }
+
+  .value-card:nth-child(6) .value-body::after {
+    content: 'A brief parent update after each session with one thing to encourage at home.';
+  }
+
+  .ecoach-section {
+    padding: 60px 20px;
+  }
+
+  .ecoach-intro {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ecoach-desc {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .ecoach-desc * {
+    display: none;
+  }
+
+  .ecoach-desc::after {
+    content: 'Not everyone can make it to East Hanover. My remote plans give you structured, individualized training on your schedule — with the same detail as every in-person session.';
+    display: block;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .ecoach-plans {
+    grid-template-columns: 1fr;
+  }
+
+  .addons-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .addons-title {
+    text-align: center;
+  }
+
+  .training-section {
+    padding: 40px 20px;
+  }
+
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-price-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .tpb-right {
+    text-align: left;
+  }
+
+  .tpb-price {
+    font-size: 48px;
+  }
+
+  .hero {
+    padding: 80px 24px 60px;
+  }
+
+  .hero-headline {
+    font-size: 72px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hero-stats {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-top: 32px;
+    align-items: flex-start;
+  }
+
+  .hero-stat {
+    text-align: left;
+  }
+
+  .percent-bar-section {
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px 20px;
+    align-items: stretch;
+  }
+
+  .progress-sessions {
+    display: none;
+  }
+
+  nav {
+    height: auto;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav-brand {
+    font-size: 18px;
+  }
+
+  .nav-toggle {
+    display: inline-flex !important;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 999px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  nav.nav-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    margin-top: 16px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(201,168,76,0.18);
+  }
+
+  nav.nav-open .nav-links li {
+    width: 100%;
+  }
+
+  nav.nav-open .nav-links a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav.nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  nav.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
   .photo-section, .schedule-section, .admin-section { padding-left: 24px; padding-right: 24px; }
   .form-grid.two-col, .form-grid.three-col { grid-template-columns: 1fr; }
   .request-board-header { flex-direction: column; }
@@ -1707,6 +1948,547 @@ footer {
   .schedule-shell { gap: 14px; }
   .month-row, .slot-head { align-items: flex-start; flex-direction: column; }
   .contact-options { grid-template-columns: 1fr; }
+  /* final mobile polish pass */
+
+  section,
+  .hero,
+  .about-section,
+  .photo-section,
+  .training-section,
+  .ecoach-section,
+  .value-section,
+  .philosophy-section,
+  .schedule-section,
+  .admin-section {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: clamp(36px, 8vw, 52px);
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    max-width: 100vw;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  .btn-primary,
+  .btn-dark {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* mobile request section centering */
+
+  .schedule-section,
+  .schedule-section .schedule-intro,
+  .schedule-section .schedule-copy,
+  .schedule-section .request-shell,
+  .schedule-section .request-board,
+  .schedule-section .request-board-header,
+  .schedule-section .request-side-panel,
+  .schedule-section .direct-contact-card {
+    text-align: center;
+  }
+
+  .schedule-section {
+    padding: 60px 20px;
+  }
+
+  .schedule-section > *,
+  .schedule-section .schedule-intro,
+  .schedule-section .schedule-copy,
+  .schedule-section .request-shell,
+  .schedule-section .request-board,
+  .schedule-section .request-board-header,
+  .schedule-section .request-board-header > *,
+  .schedule-section .request-side-panel,
+  .schedule-section .direct-contact-card,
+  .schedule-section .form-grid,
+  .schedule-section label {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .schedule-section .btn-primary,
+  .schedule-section .btn-dark,
+  .schedule-section a,
+  .schedule-section button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .schedule-section .section-eyebrow {
+    justify-content: center;
+  }
+
+  .schedule-section .request-board-header,
+  .schedule-section .request-step {
+    align-items: center;
+  }
+
+  .schedule-section .request-step {
+    justify-content: center;
+  }
+
+  .schedule-section .rate-card-mini {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* mobile about credential card centering */
+
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .credential-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  /* force-center mobile booking request + confirmation panels */
+  html,
+  body,
+  .schedule-section {
+    overflow-x: hidden;
+  }
+
+  .schedule-section {
+    padding: 60px 20px;
+  }
+
+  .schedule-section,
+  .schedule-section * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .schedule-intro,
+  .request-shell,
+  .form-grid,
+  .form-grid.two-col,
+  .form-grid.three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .request-board-header,
+  .request-step,
+  .direct-contact-card,
+  .schedule-section .hero-actions,
+  .schedule-section .contact-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .schedule-section,
+  .schedule-intro,
+  .schedule-copy,
+  .friend-card,
+  .request-shell,
+  .request-board,
+  .request-board-header,
+  .request-board-header > div,
+  .request-board-header p,
+  .rate-card-mini,
+  .form-grid,
+  .request-board label,
+  .request-board input,
+  .request-board textarea,
+  .request-board select,
+  .request-side-panel,
+  .request-step,
+  .request-step p,
+  .direct-contact-card,
+  .direct-contact-card a {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .schedule-section,
+  .schedule-copy,
+  .request-board,
+  .request-board-header,
+  .request-board-header > div,
+  .request-board-header p,
+  .request-side-panel,
+  .request-step,
+  .request-step p,
+  .direct-contact-card {
+    text-align: center;
+  }
+
+  .request-board,
+  .request-side-panel,
+  .friend-card,
+  .rate-card-mini,
+  .direct-contact-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .request-board-header,
+  .request-step {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .request-board .btn-primary,
+  .direct-contact-card a,
+  .schedule-section button,
+  .schedule-section a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .schedule-section .section-eyebrow {
+    justify-content: center;
+  }
+
+
+  /* mobile admin lock icon restore */
+  .admin-section {
+    text-align: center;
+  }
+
+  .admin-gate,
+  .admin-gate > div,
+  .admin-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .admin-gate::before {
+    content: '🔒';
+    display: block;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .admin-section .section-eyebrow,
+  .admin-section .section-title,
+  .admin-section p {
+    text-align: center;
+  }
+
+  .admin-section .section-eyebrow {
+    justify-content: center;
+  }
+
+
+  /* surgical lesson request mobile alignment fix */
+  .schedule-section {
+    padding: 60px 20px;
+    overflow-x: hidden;
+  }
+
+  .request-shell {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .request-board {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .request-board-header {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  #availability-request-form .request-board-header h3 {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #availability-request-form .request-board-header .panel-label {
+    margin: 0 0 8px 0;
+  }
+
+
+  /* final mobile polish for booking/admin/cta */
+  .schedule-section {
+    padding: 60px 20px;
+    overflow-x: hidden;
+  }
+
+  .request-shell {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .request-board,
+  .request-side-panel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 24px 18px 26px;
+    border: 1px solid rgba(201,168,76,0.26);
+    border-left: 1px solid rgba(201,168,76,0.26);
+    border-right: 1px solid rgba(201,168,76,0.26);
+    border-radius: 12px;
+    background: var(--navy-mid);
+    box-shadow: 0 18px 42px rgba(0,0,0,0.24);
+    overflow: hidden;
+  }
+
+  .request-board-header {
+    width: 100%;
+    padding: 18px 0 22px;
+    margin: 0 0 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+    align-items: stretch;
+  }
+
+  #availability-request-form .request-board-header .panel-label {
+    margin: 0 0 12px 0;
+    display: block;
+  }
+
+  #availability-request-form .request-board-header h3 {
+    font-size: 34px;
+    line-height: 1;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  #availability-request-form .request-board-header p {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .rate-card-mini {
+    width: 100%;
+    margin: 14px auto 0;
+  }
+
+  .request-board label,
+  .request-board input,
+  .request-board textarea,
+  .request-board select {
+    text-align: left;
+  }
+
+  .request-board .btn-primary {
+    width: 100%;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .request-side-panel {
+    text-align: center;
+  }
+
+  .request-side-panel .panel-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .request-step {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .request-step p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .direct-contact-card {
+    width: 100%;
+    margin: 12px auto 0;
+    padding: 18px;
+    text-align: center;
+    border: 1px solid rgba(201,168,76,0.28);
+    border-left: 1px solid rgba(201,168,76,0.28);
+    border-right: 1px solid rgba(201,168,76,0.28);
+  }
+
+  .direct-contact-card a[href="mailto:adamwitkow2027@gmail.com"],
+  .direct-contact-card a[href="mailto:adamwitow2027@gmail.com"] {
+    background-color: #C9A84C;
+    color: #0a0e1a;
+    padding: 14px 18px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 16px;
+  }
+
+  .direct-contact-card a[href^="tel:"] {
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+    text-align: center;
+    border: 1px solid rgba(201,168,76,0.28);
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  .admin-section.admin-locked .admin-protected {
+    display: none !important;
+  }
+
+  .admin-section.admin-locked .admin-gate {
+    display: flex !important;
+  }
+
+  .admin-gate {
+    width: 100%;
+    margin: 0 auto;
+    padding: 26px 18px;
+    border: 1px solid rgba(201,168,76,0.26);
+    border-left: 1px solid rgba(201,168,76,0.26);
+    border-right: 1px solid rgba(201,168,76,0.26);
+    border-radius: 12px;
+    background: var(--navy);
+  }
+
+  .admin-gate-form,
+  .admin-gate-form label,
+  .admin-gate-form input,
+  .admin-gate-form button {
+    width: 100%;
+  }
+
+  .cta-section {
+    width: 100%;
+    padding: 60px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .cta-left,
+  .cta-right {
+    width: 100%;
+    max-width: 100%;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .cta-headline {
+    max-width: 100%;
+    font-size: clamp(42px, 12vw, 56px);
+  }
+
+  .cta-right .btn-dark {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  .cta-note {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+
+  /* mobile footer usability polish */
+  footer {
+    width: 100%;
+    padding: 34px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .footer-brand,
+  .footer-meta,
+  .footer-links {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-meta {
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 18px;
+  }
+
+  .footer-links a {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    white-space: nowrap;
+  }
+
 }
 
 </style>
@@ -1716,6 +2498,11 @@ footer {
 <!-- NAV -->
 <nav>
   <div class="nav-brand">Build Wit Purpose</div>
+  <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" style="display:none">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#training">In-Person</a></li>
@@ -2342,6 +3129,20 @@ footer {
 
 
 <script>
+
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector("nav");
+navToggle?.addEventListener("click", () => {
+  const isOpen = siteNav?.classList.toggle("nav-open");
+  navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+});
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    siteNav?.classList.remove("nav-open");
+    navToggle?.setAttribute("aria-expanded", "false");
+  });
+});
+
 const STORAGE_KEY = "buildWitPurpose.privateSchedulePreview.v1";
 
 const ADMIN_PASSWORD = "BWP2026";
@@ -2352,13 +3153,13 @@ function initAdminGate() {
   const input = document.querySelector("#admin-password");
   const note = document.querySelector("#admin-gate-note");
   if (!section || !form || !input) return;
-  if (localStorage.getItem(ADMIN_UNLOCK_KEY) === "true") {
+  if (sessionStorage.getItem(ADMIN_UNLOCK_KEY) === "true") {
     section.classList.remove("admin-locked");
   }
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (input.value === ADMIN_PASSWORD) {
-      localStorage.setItem(ADMIN_UNLOCK_KEY, "true");
+      sessionStorage.setItem(ADMIN_UNLOCK_KEY, "true");
       section.classList.remove("admin-locked");
       input.value = "";
       section.scrollIntoView({ behavior: "smooth", block: "start" });
