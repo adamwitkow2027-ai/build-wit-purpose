@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Build Wit Purpose — Adam Witkowski</title>
+<title>Camps & Clinics — Build Wit Purpose</title>
+<meta name="description" content="Small-group volleyball camps and clinics with Adam Witkowski — competitive reps, position-specific stations, and the same organized coaching system as private lessons.">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -993,13 +994,13 @@ section {
   top: calc(100% + 16px);
   left: 50%;
   transform: translateX(-50%) translateY(-6px);
-  width: min(480px, 92vw);
+  width: min(360px, 86vw);
   background: linear-gradient(165deg, var(--navy-soft), var(--navy-mid));
   color: rgba(255,255,255,0.88);
-  border: 1px solid rgba(201,168,76,0.42);
-  border-radius: 18px;
-  padding: 44px 38px 36px;
-  box-shadow: 0 32px 70px rgba(0,0,0,0.6), 0 0 46px rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 14px;
+  padding: 34px 28px 26px;
+  box-shadow: 0 28px 60px rgba(0,0,0,0.55);
   text-align: left;
   font-size: 14px;
   line-height: 1.7;
@@ -1009,36 +1010,16 @@ section {
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 40;
 }
-.ribbon-card-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 1;
-}
-.ribbon-stars {
-  color: var(--gold);
-  font-size: 15px;
-  letter-spacing: 2px;
-}
-.ribbon-name {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-}
 .ribbon-card::after {
   content: '\201C';
   position: absolute;
-  top: 6px;
-  left: 28px;
+  top: 2px;
+  left: 20px;
   font-family: 'DM Serif Display', serif;
-  font-size: 68px;
+  font-size: 56px;
   line-height: 1;
   color: var(--gold);
-  opacity: 0.6;
+  opacity: 0.55;
 }
 .ribbon-card::before {
   content: '';
@@ -1059,11 +1040,11 @@ section {
   margin: 0;
   font-family: 'DM Serif Display', serif;
   font-style: italic;
-  font-size: 17px;
-  line-height: 1.78;
-  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.85);
 }
-.ribbon-card em { color: var(--gold-light); font-style: normal; font-weight: 600; }
+.ribbon-card em { color: var(--gold-light); font-style: normal; }
 
 .testimonial-ribbon:hover .ribbon-card,
 .testimonial-ribbon.open .ribbon-card {
@@ -2731,6 +2712,37 @@ footer {
   .subpage-cta-band .sc-right .btn-dark { width: 100%; text-align: center; }
 }
 
+/* ===== MINI TEASER CARD (used on homepage to point to standalone pages) ===== */
+.mini-teaser-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 10px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+.mini-teaser-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.mini-teaser-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+.mini-teaser-card .btn-primary {
+  align-self: flex-start;
+}
+@media (max-width: 768px) {
+  .mini-teaser-card { padding: 24px 22px; align-items: stretch; }
+  .mini-teaser-card .btn-primary { align-self: stretch; text-align: center; }
+}
 
 </style>
 </head>
@@ -2745,559 +2757,118 @@ footer {
     <span></span>
   </button>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#training">In-Person</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#training">In-Person</a></li>
     <li><a href="camps.html">Camps</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="index.html#testimonials">Testimonials</a></li>
     <li><a href="remote.html">Remote</a></li>
-    <li><a href="#value">What You Get</a></li>
-    <li><a href="#book" class="nav-cta">Schedule</a></li>
-    <li><a href="#admin">Admin</a></li>
+    <li><a href="index.html#value">What You Get</a></li>
+    <li><a href="index.html#book" class="nav-cta">Schedule</a></li>
+    <li><a href="index.html#admin">Admin</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="court-lines"></div>
-
-  <div class="hero-eyebrow">Private Volleyball Training · Indoor & Beach Sessions</div>
-
-  <h1 class="hero-headline">
-    GET<br><span class="accent">1%</span><br>BETTER<br>EVERY DAY.
-  </h1>
-
-  <p class="hero-sub">
-    College-level coaching rooted in health science, servant leadership, and a system that sees <em>you</em> — not just a position to fill.
+<!-- PAGE INTRO -->
+<section id="camps-intro">
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <div class="section-eyebrow">Group Training</div>
+  <h2 class="section-title">CAMPS &amp;<br><span class="accent">CLINICS.</span></h2>
+  <p class="subpage-intro-copy">
+    Private lessons aren't the only way to get better. <strong>Group clinics bring 4–6 athletes together</strong> for high-energy, competitive reps — the same organized coaching system as a private session, just with more players on the court at once. Great for tryout prep, off-season maintenance, or a group of friends who want to train together.
   </p>
-
-  <div class="hero-actions">
-    <a href="#book" class="btn-primary">Schedule a Lesson</a>
-  </div>
-
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-num">8+</div>
-      <div class="hero-stat-label">Years Playing</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">QU</div>
-      <div class="hero-stat-label">Collegiate Libero</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">2×</div>
-      <div class="hero-stat-label">Team Captain</div>
-    </div>
-  </div>
 </section>
 
-<!-- 1% Progress Bar (brand signature) -->
-<div class="percent-bar-section">
-  <div class="percent-label">1% STRONGER EVERY SESSION</div>
-  <div class="progress-track">
-    <div class="progress-fill"></div>
-  </div>
-  <div class="progress-sessions">
-    <div class="prog-session">Defense <span>↑</span></div>
-    <div class="prog-session">Serve Mechanics <span>↑</span></div>
-    <div class="prog-session">Athleticism <span>↑</span></div>
-    <div class="prog-session">IQ <span>↑</span></div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-left">
-    <div class="section-eyebrow">Your Coach</div>
-    <h2 class="section-title">ADAM<br><span class="accent">WITKOWSKI</span></h2>
-
-    <div class="about-body">
-      <p>
-        I'm a <strong>collegiate Libero at Quinnipiac University</strong> and two-time team captain, now teaching those same fundamentals to the next generation — inspired by a college student teaching a summer camp who showed me my first topspin serve and changed everything.
-      </p>
-      <p>
-        I'm studying to be a Physical Therapist, which means my coaching doesn't stop at technique. Every session is built around how your body actually moves, recovers, and gets stronger — so you stay healthy and improve at the same time.
-      </p>
-      <div class="about-quote">
-        <p>"How do you eat an elephant? One bite at a time. That's how I coach — small, compounding steps that build something real."</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="about-right">
-    <div class="about-photo-card"><img class="headshot-img" src="https://raw.githubusercontent.com/adamwitkow2027-ai/build-wit-purpose/main/public/assets/adam-headshot.jpg" alt="Adam Witkowski headshot"></div>
-    <div class="credential-card">
-      <div class="cred-icon">🏐</div>
-      <div>
-        <div class="cred-text-title">Collegiate Libero · Quinnipiac University</div>
-        <div class="cred-text-sub">8+ years across club, high school & collegiate levels · 2× Team Captain</div>
-      </div>
-    </div>
-    <div class="credential-card">
-      <div class="cred-icon">🧬</div>
-      <div>
-        <div class="cred-text-title">Pre-DPT Student</div>
-        <div class="cred-text-sub">Movement science, injury prevention & recovery built into every session</div>
-      </div>
-    </div>
-    <div class="credential-card">
-      <div class="cred-icon">❤️</div>
-      <div>
-        <div class="cred-text-title">CPR/AED Certified</div>
-        <div class="cred-text-sub">Child, Infant & Adult · American Heart Association · 2025</div>
-      </div>
-    </div>
-    <div class="credential-card">
-      <div class="cred-icon">⚜️</div>
-      <div>
-        <div class="cred-text-title">Life Scout · Boy Scouts of America</div>
-        <div class="cred-text-sub">6 years in Scouting shaped my leadership, communication & team accountability — not just volleyball</div>
-      </div>
-    </div>
-    <div class="credential-card">
-      <div class="cred-icon">✈️</div>
-      <div>
-        <div class="cred-text-title">4 Mission Trips · Africa & Costa Rica</div>
-        <div class="cred-text-sub">Every great coach I've had invested in me as a person first. I bring that same energy to every session.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- REAL PHOTOS -->
-<section class="photo-section" id="photos">
-  <div class="photo-grid">
-    <figure class="photo-tile large">
-      <img class="action-img" src="https://raw.githubusercontent.com/adamwitkow2027-ai/build-wit-purpose/main/public/assets/volleyball-attack.jpeg" alt="Adam Witkowski playing volleyball" />
-      <figcaption class="photo-caption">College-level playing background</figcaption>
-    </figure>
-    <figure class="photo-tile">
-      <img src="https://raw.githubusercontent.com/adamwitkow2027-ai/build-wit-purpose/main/public/assets/volleyball-connect.jpeg" alt="Adam Witkowski talking with a teammate on court" />
-      <figcaption class="photo-caption">Communication first</figcaption>
-    </figure>
-    <figure class="photo-tile">
-      <img class="headshot-img" src="https://raw.githubusercontent.com/adamwitkow2027-ai/build-wit-purpose/main/public/assets/adam-headshot.jpg" alt="Adam Witkowski professional headshot" />
-      <figcaption class="photo-caption">Coach Adam Witkowski</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- IN-PERSON TRAINING -->
-<section class="training-section" id="training">
-  <div class="section-eyebrow">In-Person Sessions</div>
-  <h2 class="section-title">TRAIN<br><span class="accent">YOUR WAY</span></h2>
+<!-- FORMAT -->
+<section class="training-section" id="camp-format">
+  <div class="section-eyebrow">How a Clinic Runs</div>
+  <h2 class="section-title">ONE SESSION,<br><span class="accent">FOUR PARTS.</span></h2>
 
   <div class="training-grid">
     <div class="training-card">
       <div class="tc-num">01</div>
-      <div class="tc-title">Defensive Reading & Passing</div>
-      <div class="tc-body">College-level positioning, split step mechanics, and the pattern recognition that separates good defenders from great ones.</div>
+      <div class="tc-title">Warm-Up &amp; Movement Prep</div>
+      <div class="tc-body">A dynamic warm-up and athletic movement prep — the same Pre-PT-informed approach used in every private session, scaled for a group.</div>
     </div>
     <div class="training-card">
       <div class="tc-num">02</div>
-      <div class="tc-title">Serve Mechanics</div>
-      <div class="tc-body">Tournament-tested topspin and a reliable float serve — built from the same system I use competing at the collegiate level.</div>
+      <div class="tc-title">Skill Stations</div>
+      <div class="tc-body">Athletes rotate in small groups through passing, serving, and hitting stations, so everyone gets focused reps on every skill, every session.</div>
     </div>
     <div class="training-card">
       <div class="tc-num">03</div>
-      <div class="tc-title">Movement & Athleticism</div>
-      <div class="tc-body">Pre-PT training science applied to volleyball: mobility, stability, and explosive movement that keeps you healthy and fast.</div>
+      <div class="tc-title">Live Competitive Reps</div>
+      <div class="tc-body">Structured live play and small-sided games put those skills under real pressure — the part solo drilling can't replicate.</div>
     </div>
     <div class="training-card">
       <div class="tc-num">04</div>
-      <div class="tc-title">Sport-Specific Athlete</div>
-      <div class="tc-body">If you only play one sport, I'll turn that into an advantage — building athleticism that makes you stand out against every generalist in the gym.</div>
+      <div class="tc-title">Group Recap</div>
+      <div class="tc-body">A short group breakdown at the end of every session, plus the same post-session recap notes families get from private lessons.</div>
     </div>
   </div>
 
   <div class="training-options">
     <div class="training-price-bar">
-      <div class="tpb-badge">🏐 Indoor</div>
+      <div class="tpb-badge">🏐 Single Session</div>
       <div class="tpb-left">
-        <div class="tpb-label">Indoor Lesson Rate</div>
-        <div class="tpb-price">$95</div>
-        <div class="tpb-details">1-hour session · Court time included · Indoor court (location TBD)</div>
+        <div class="tpb-label">Group Clinic Rate</div>
+        <div class="tpb-price">$40</div>
+        <div class="tpb-details">per athlete · 90 minutes · Groups of 4–6</div>
       </div>
       <div class="tpb-right">
         <div class="tpb-includes-title">What's Included</div>
-        <div class="tpb-include-item">Personalized drill plan</div>
-        <div class="tpb-include-item">Movement & athleticism work</div>
-        <div class="tpb-include-item">Post-session recap notes</div>
-        <div class="tpb-include-item">Full indoor court access</div>
+        <div class="tpb-include-item">Position-specific stations</div>
+        <div class="tpb-include-item">Live competitive reps</div>
+        <div class="tpb-include-item">Post-session group recap</div>
+        <div class="tpb-include-item">Indoor or beach courts available</div>
       </div>
     </div>
 
     <div class="training-price-bar">
-      <div class="tpb-badge">🏖️ Beach</div>
+      <div class="tpb-badge">📅 4-Session Series</div>
       <div class="tpb-left">
-        <div class="tpb-label">Beach Lesson Rate</div>
-        <div class="tpb-price">$75</div>
-        <div class="tpb-details">1-hour session · Outdoor sand courts · No court rental fee</div>
+        <div class="tpb-label">Series Rate</div>
+        <div class="tpb-price">$140</div>
+        <div class="tpb-details">per athlete · $35/session · save vs. single sessions</div>
       </div>
       <div class="tpb-right">
         <div class="tpb-includes-title">What's Included</div>
-        <div class="tpb-include-item">Personalized drill plan</div>
-        <div class="tpb-include-item">Movement & athleticism work</div>
-        <div class="tpb-include-item">Post-session recap notes</div>
-        <div class="tpb-include-item">Sand-specific movement & fundamentals</div>
+        <div class="tpb-include-item">Everything in a single clinic</div>
+        <div class="tpb-include-item">Progressive skill-building across weeks</div>
+        <div class="tpb-include-item">Consistent training group</div>
+        <div class="tpb-include-item">Great for a pre-tryout prep block</div>
       </div>
     </div>
   </div>
 
-  <p style="margin-top:28px; font-size:13px; color:rgba(255,255,255,0.45);">Have a small group instead of one athlete? See <a href="camps.html" style="color:var(--gold); text-decoration:none;">Camps &amp; Clinics →</a></p>
-  <p style="margin-top:10px; font-size:13px; color:rgba(255,255,255,0.45);">Prefer to train on your own schedule? See <a href="remote.html" style="color:var(--gold); text-decoration:none;">Remote Coaching →</a></p>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonial-section" id="testimonials">
-  <div class="section-eyebrow">Client Testimonies</div>
-
-  <div class="testimonial-ribbons">
-    <div class="testimonial-ribbon">
-      <button class="ribbon-tab" type="button" aria-expanded="false">The May Family</button>
-      <div class="ribbon-card">
-        <div class="ribbon-card-head">
-          <span class="ribbon-stars">★★★★★</span>
-          <span class="ribbon-name">The May Family</span>
-        </div>
-        <p>"Adam is a great volleyball coach! Our 15 year old son took private lessons with him over the summer to get ready for tryouts and it made a <em>HUGE difference</em>. <em>Great positive energy</em> and impactful tips and cues. Adam also made himself available to answer questions and provide resources which we really appreciated as parents. Thank you!"</p>
-      </div>
-    </div>
-
-    <div class="testimonial-ribbon">
-      <button class="ribbon-tab" type="button" aria-expanded="false">The Mukerjee Family</button>
-      <div class="ribbon-card">
-        <div class="ribbon-card-head">
-          <span class="ribbon-stars">★★★★★</span>
-          <span class="ribbon-name">The Mukerjee Family</span>
-        </div>
-        <p>"We were extremely lucky to be connected with Adam this summer. My daughter was relatively new to volleyball and struggled with overhand serving and passing. He made an <em>immediate impact</em> in just a few sessions, helping her work through both her lack of confidence and skills. Rather than giving her immediate feedback after every rep, he taught her to understand the mechanics behind controlling the ball's direction through her movement and helped her recognize areas to adjust and refine. She now has <em>much more confidence</em> and most importantly, much more fun with the game all thanks to his <em>unwavering enthusiasm and support</em>. His knowledge of the game, positive energy, and ability to connect with a high-school athlete really stood out, and I especially appreciated his candid feedback to me as a parent. Adam is an excellent coach who genuinely invests in an athlete's development, and I would <em>highly recommend him</em>."</p>
-      </div>
-    </div>
-  </div>
-
-  <p class="testimonial-tagline">I've had the privilege of working with wonderful families, and I'd love to make an impact on your player's game.</p>
-</section>
-
-<script>
-  document.querySelectorAll(".testimonial-ribbon").forEach(function (ribbon) {
-    var tab = ribbon.querySelector(".ribbon-tab");
-    tab.addEventListener("click", function (e) {
-      e.stopPropagation();
-      var isOpen = ribbon.classList.contains("open");
-      document.querySelectorAll(".testimonial-ribbon.open").forEach(function (r) {
-        if (r !== ribbon) {
-          r.classList.remove("open");
-          r.querySelector(".ribbon-tab").setAttribute("aria-expanded", "false");
-        }
-      });
-      ribbon.classList.toggle("open", !isOpen);
-      tab.setAttribute("aria-expanded", String(!isOpen));
-    });
-  });
-  document.addEventListener("click", function () {
-    document.querySelectorAll(".testimonial-ribbon.open").forEach(function (r) {
-      r.classList.remove("open");
-      r.querySelector(".ribbon-tab").setAttribute("aria-expanded", "false");
-    });
-  });
-</script>
-
-<!-- VALUE ADDS -->
-<section class="value-section" id="value">
-  <div class="section-eyebrow">Why This is Worth More</div>
-  <h2 class="section-title">WHAT YOU<br><span class="accent">ACTUALLY GET</span></h2>
-
-  <div class="value-grid">
-    <div class="value-card">
-      <div class="value-card-top">
-        <div class="value-icon">🧠</div>
-        <div class="value-tag">Free Bonus</div>
-      </div>
-      <div class="value-title">Post-Session Recap Notes</div>
-      <div class="value-body">After every session, I send a short written recap — what we worked on, what to practice on your own, and what we'll build on next time. Most coaches walk out the door. I make sure progress continues between sessions.</div>
-    </div>
-
-    <div class="value-card">
-      <div class="value-card-top">
-        <div class="value-icon">🎯</div>
-        <div class="value-tag">Included</div>
-      </div>
-      <div class="value-title">Pre-Session Intake Form</div>
-      <div class="value-body">New athletes fill out a short intake before their first session — position, goals, learning style, current strengths and struggles. I show up knowing your game before you step on the court.</div>
-    </div>
-
-    <div class="value-card">
-      <div class="value-card-top">
-        <div class="value-icon">📈</div>
-        <div class="value-tag">Included</div>
-      </div>
-      <div class="value-title">Progress Tracking Document</div>
-      <div class="value-body">A shared doc that tracks your skill growth session by session. You can see exactly how far you've come — which motivates athletes and shows parents the value of every hour.</div>
-    </div>
-
-    <div class="value-card">
-      <div class="value-card-top">
-        <div class="value-icon">🔬</div>
-        <div class="value-tag">Unique</div>
-      </div>
-      <div class="value-title">Movement Screening</div>
-      <div class="value-body">As a Pre-DPT student, I screen for movement patterns that could lead to injury — ankle mobility, hip stability, knee tracking. You get physical therapy-level awareness without the PT bill.</div>
-    </div>
-
-    <div class="value-card">
-      <div class="value-card-top">
-        <div class="value-icon">🎓</div>
-        <div class="value-tag">Unique</div>
-      </div>
-      <div class="value-title">Collegiate-Level Insight</div>
-      <div class="value-body">I'm actively competing at Quinnipiac — not coaching from memory. You get real, current knowledge of what works at the highest club level, applied to your game today.</div>
-    </div>
-
-    <div class="value-card">
-      <div class="value-card-top">
-        <div class="value-icon">🤝</div>
-        <div class="value-tag">Free Bonus</div>
-      </div>
-      <div class="value-title">Parent Communication</div>
-      <div class="value-body">Parents get a brief update after each session — what we focused on and one thing to encourage at home. It builds trust, keeps families involved, and makes sure the investment feels worthwhile every time.</div>
-    </div>
-  </div>
-</section>
-
-<!-- PHILOSOPHY -->
-<section class="philosophy-section">
-  <div class="section-eyebrow">The Coaching Philosophy</div>
-  <p class="philosophy-big">
-    "I learned my first topspin from a college kid coaching a summer camp going into 9th grade. <em>That one moment changed how I felt about this sport.</em> I'm here to be that person for someone else."
+  <p class="subpage-intro-copy" style="margin-top:24px; font-size:13px;">
+    Minimum group size is 4 athletes. Have a smaller group interested? Reach out anyway — Adam can help you find a fit or connect your group with another one.
   </p>
-  <div class="philosophy-attr">— ADAM WITKOWSKI · BUILD WIT PURPOSE</div>
 </section>
 
 <!-- CTA -->
-
-
-<section class="schedule-section" id="book">
-  <div class="schedule-intro">
-    <div class="schedule-copy">
-      <div class="section-eyebrow">Request a Lesson Time</div>
-      <h2 class="section-title">SEND YOUR<br><span class="accent">BEST WINDOWS.</span></h2>
-      <p>Instead of texting back and forth, families can send their preferred dates, time windows, athlete details, and training goals in one clean request. Adam will confirm court availability before the lesson is final.</p>
+<section style="padding: 0 60px 100px;">
+  <div class="subpage-cta-band">
+    <div class="sc-left">
+      <h3>READY TO<br>BUILD A GROUP?</h3>
+      <p>Send your group size, athlete levels, and preferred dates — Adam will confirm a session that fits your group.</p>
     </div>
-    <aside class="friend-card">
-      <div class="friend-card-label">Bring a friend option</div>
-      <h3>2 athletes. 2 hours. $95 each.</h3>
-      <p>If your athlete wants to bring a friend, request two back-to-back hours. Adam works with one athlete while the other acts as the practice player, then flips the focus. Each athlete gets focused coaching plus live reps.</p>
-    </aside>
-  </div>
-
-  <div class="request-shell">
-    <form class="request-board" id="availability-request-form">
-      <div class="request-board-header">
-        <div>
-          <div class="panel-label">Lesson Request</div>
-          <h3>Tell Adam what works.</h3>
-          <p>Share a few windows so Adam can match your schedule with court availability.</p>
-        </div>
-        <div class="rate-card-mini">
-          <span id="rate-mini-price">$95</span>
-          <small id="rate-mini-details">1-hour private lesson<br>Court time included</small>
-        </div>
-      </div>
-
-      <label>
-        Lesson format
-        <select name="format" id="lesson-format">
-          <option value="Indoor" data-price="$95" data-details="1-hour private lesson<br>Court time included" selected>Indoor — $95/hr</option>
-          <option value="Beach" data-price="$75" data-details="1-hour private lesson<br>Outdoor sand courts">Beach — $75/hr</option>
-        </select>
-      </label>
-
-      <div class="form-grid two-col">
-        <label>
-          Athlete name
-          <input name="athlete" required placeholder="First and last name" />
-        </label>
-        <label>
-          Parent name
-          <input name="parent" required placeholder="Parent / guardian" />
-        </label>
-      </div>
-
-      <div class="form-grid two-col">
-        <label>
-          Best phone
-          <input name="phone" required placeholder="908-___-____" />
-        </label>
-        <label>
-          Best email
-          <input name="email" type="email" placeholder="name@email.com" />
-        </label>
-      </div>
-
-      <div class="form-grid three-col preferred-times">
-        <label>
-          Preferred window 1
-          <input name="window1" required placeholder="Example: Tue 6/18 after 4pm" />
-        </label>
-        <label>
-          Preferred window 2
-          <input name="window2" placeholder="Example: Thu evening" />
-        </label>
-        <label>
-          Preferred window 3
-          <input name="window3" placeholder="Example: Sat morning" />
-        </label>
-      </div>
-
-      <div class="form-grid two-col">
-        <label>
-          Athlete level
-          <select name="level">
-            <option>Brand new to volleyball</option>
-            <option>Beginner / building fundamentals</option>
-            <option>School team hopeful</option>
-            <option>Club player</option>
-            <option>Advanced / position-specific</option>
-          </select>
-        </label>
-        <label>
-          Bring a friend?
-          <select name="friend">
-            <option>No, one athlete</option>
-            <option>Maybe, tell me more</option>
-            <option>Yes, requesting two back-to-back hours</option>
-          </select>
-        </label>
-      </div>
-
-      <label>
-        What should the lesson focus on?
-        <textarea name="goals" rows="5" placeholder="Passing, serve receive, libero defense, serving, tryout prep, athletic movement, confidence, beginner foundation, etc."></textarea>
-      </label>
-
-      <label>
-        Anything Adam should know before confirming court time?
-        <textarea name="notes" rows="3" placeholder="Age/grade, position, injury history, preferred communication method, scheduling constraints, etc."></textarea>
-      </label>
-
-      <button class="btn-primary" type="submit">Prepare Lesson Request</button>
-      <p class="form-note" id="availability-form-note">This prepares an email with all details so Adam can confirm court/beach availability and reply with the final lesson slot.</p>
-    </form>
-
-    <aside class="request-side-panel">
-      <div class="panel-label">How Confirmation Works</div>
-      <div class="request-step"><span>01</span><p>Family sends preferred time windows.</p></div>
-      <div class="request-step"><span>02</span><p>Adam checks court availability.</p></div>
-      <div class="request-step"><span>03</span><p>Final lesson time is confirmed directly.</p></div>
-      <div class="direct-contact-card">
-        <strong>Questions before requesting?</strong>
-        <a href="mailto:adamwitkow2027@gmail.com">adamwitkow2027@gmail.com</a>
-        <a href="tel:19088580783">Call/Text 908-858-0783</a>
-      </div>
-    </aside>
+    <div class="sc-right">
+      <a href="mailto:adamwitkow2027@gmail.com?subject=Group%20Clinic%20Request&body=Hi%20Adam%2C%0A%0AI%27m%20interested%20in%20setting%20up%20a%20group%20clinic.%0A%0AGroup%20size%3A%20%0AAthlete%20level%28s%29%3A%20%0APreferred%20dates/times%3A%20%0AIndoor%20or%20beach%20preference%3A%20%0A%0AThanks%21" class="btn-dark">Request a Camp Session</a>
+      <div class="cta-note" style="color: rgba(10,14,26,.55);">Sessions confirmed based on court/beach availability</div>
+    </div>
   </div>
 </section>
-
-<section class="admin-section admin-locked" id="admin">
-  <div class="admin-gate" id="admin-gate">
-    <div>
-      <div class="section-eyebrow">Admin Access</div>
-      <h2 class="section-title">PRIVATE<br><span class="accent">SCHEDULE.</span></h2>
-      <p>This area is for Adam only. Enter the admin password to manage availability and review lesson requests.</p>
-    </div>
-    <form class="admin-gate-form" id="admin-gate-form">
-      <label>
-        Admin password
-        <input type="password" id="admin-password" autocomplete="current-password" placeholder="Enter password" required />
-      </label>
-      <button class="btn-primary" type="submit">Unlock Admin</button>
-      <p class="form-note" id="admin-gate-note">Public visitors only need the lesson request form above.</p>
-    </form>
-  </div>
-
-  <div class="admin-protected" id="admin-protected">
-  <div class="admin-intro">
-    <div class="section-eyebrow">Admin Access</div>
-    <h2 class="section-title">SET YOUR<br><span class="accent">AVAILABILITY.</span></h2>
-    <p>Manage availability and review lesson requests from this locked admin area.</p>
-  </div>
-
-  <div class="admin-grid">
-    <form class="admin-card" id="admin-form">
-      <h3>Add Open Slot</h3>
-      <label>
-        Date
-        <input type="date" name="date" required />
-      </label>
-      <label>
-        Start time
-        <input type="time" name="time" required />
-      </label>
-      <label>
-        Location
-        <select name="location">
-          <option value="Indoor Court">Indoor Court</option>
-          <option value="Beach / Outdoor">Beach / Outdoor</option>
-          <option value="To be confirmed">To be confirmed</option>
-        </select>
-      </label>
-      <label>
-        Private note
-        <input name="note" placeholder="Example: good for passing reps" />
-      </label>
-      <button class="btn-primary" type="submit">Add 1-Hour Slot · $95</button>
-      <p class="admin-protect-note">Admin-only scheduling controls.</p>
-    </form>
-
-    <section class="admin-card wide">
-      <div class="slot-head">
-        <div>
-          <div class="section-eyebrow">Schedule Board</div>
-          <h3>All Slots</h3>
-        </div>
-        <button class="status-button" id="seed-slots" type="button">Seed Sample Week</button>
-      </div>
-      <div class="admin-list" id="admin-list"></div>
-    </section>
-
-    <section class="admin-card requests">
-      <div class="slot-head">
-        <div>
-          <div class="section-eyebrow">Follow-Up Queue</div>
-          <h3>Client Requests</h3>
-        </div>
-        <button class="status-button danger" id="clear-requests" type="button">Clear Requests</button>
-      </div>
-      <div class="admin-list" id="request-list"></div>
-    </section>
-  </div>
-  </div>
-</section>
-
-<div class="cta-section">
-  <div class="cta-left">
-    <div class="cta-eyebrow">Need to ask first?</div>
-    <div class="cta-headline">REACH OUT<br>DIRECTLY.</div>
-  </div>
-  <div class="cta-right">
-    <a href="mailto:adamwitkow2027@gmail.com" class="btn-dark">Email Adam</a>
-    <a href="tel:19088580783" class="btn-dark">Call or Text 908-858-0783</a>
-    <div class="cta-note">Private lessons · $95/hour · court time confirmed after request</div>
-  </div>
-</div>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">Build Wit Purpose</div>
   <div class="footer-meta">Adam Witkowski · Indoor & Beach Volleyball Coaching · @rollwitme on TikTok</div>
   <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#training">In-Person</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#training">In-Person</a>
     <a href="camps.html">Camps</a>
     <a href="remote.html">Remote</a>
-    <a href="#book">Book</a>
+    <a href="index.html#book">Book</a>
   </div>
 </footer>
 
@@ -3317,256 +2888,5 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 });
 
 </script>
-<script>
-
-const STORAGE_KEY = "buildWitPurpose.privateSchedulePreview.v1";
-
-const ADMIN_PASSWORD = "BWP2026";
-const ADMIN_UNLOCK_KEY = "buildWitPurpose.adminUnlocked.v1";
-function initAdminGate() {
-  const section = document.querySelector("#admin");
-  const form = document.querySelector("#admin-gate-form");
-  const input = document.querySelector("#admin-password");
-  const note = document.querySelector("#admin-gate-note");
-  if (!section || !form || !input) return;
-  if (sessionStorage.getItem(ADMIN_UNLOCK_KEY) === "true") {
-    section.classList.remove("admin-locked");
-  }
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (input.value === ADMIN_PASSWORD) {
-      sessionStorage.setItem(ADMIN_UNLOCK_KEY, "true");
-      section.classList.remove("admin-locked");
-      input.value = "";
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else if (note) {
-      note.textContent = "That password did not work. Try again.";
-    }
-  });
-}
-
-const today = new Date();
-const pad = (n) => String(n).padStart(2, "0");
-const toDateKey = (date) => `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
-const parseDate = (key) => {
-  const [year, month, day] = key.split("-").map(Number);
-  return new Date(year, month - 1, day);
-};
-const formatDate = (key, long = true) => parseDate(key).toLocaleDateString(undefined, long ? {
-  weekday: "long", month: "long", day: "numeric", year: "numeric"
-} : { month: "short", day: "numeric" });
-const formatTime = (value) => {
-  const [hour, minute] = value.split(":").map(Number);
-  return new Date(2026, 0, 1, hour, minute).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
-};
-const newId = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`);
-const defaultState = () => ({
-  slots: [
-    { id: newId(), date: toDateKey(new Date(today.getFullYear(), today.getMonth(), today.getDate() + 2)), time: "10:00", location: "Indoor Court", note: "Passing + defensive reading", status: "open" },
-    { id: newId(), date: toDateKey(new Date(today.getFullYear(), today.getMonth(), today.getDate() + 3)), time: "13:00", location: "Indoor Court", note: "Beginner-friendly fundamentals", status: "open" },
-    { id: newId(), date: toDateKey(new Date(today.getFullYear(), today.getMonth(), today.getDate() + 5)), time: "16:30", location: "Indoor Court", note: "Tryout prep / confidence reps", status: "open" }
-  ],
-  requests: []
-});
-let state = loadState();
-let visibleMonth = new Date(today.getFullYear(), today.getMonth(), 1);
-let selectedDate = firstDateWithSlots() || toDateKey(today);
-let selectedSlotId = "";
-function loadState() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || defaultState(); }
-  catch { return defaultState(); }
-}
-function saveState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
-function firstDateWithSlots() {
-  return [...state.slots].filter((slot) => slot.status === "open").sort((a, b) => `${a.date}${a.time}`.localeCompare(`${b.date}${b.time}`))[0]?.date;
-}
-function slotsForDate(date) {
-  return state.slots.filter((slot) => slot.date === date && slot.status === "open").sort((a, b) => a.time.localeCompare(b.time));
-}
-function renderCalendar() {
-  const monthLabel = document.querySelector("#month-label");
-  const grid = document.querySelector("#calendar-grid");
-  if (!monthLabel || !grid) return;
-  monthLabel.textContent = visibleMonth.toLocaleDateString(undefined, { month: "long", year: "numeric" });
-  grid.innerHTML = "";
-  const first = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth(), 1);
-  const start = new Date(first);
-  start.setDate(first.getDate() - first.getDay());
-  const month = visibleMonth.getMonth();
-  for (let i = 0; i < 42; i++) {
-    const date = new Date(start);
-    date.setDate(start.getDate() + i);
-    const key = toDateKey(date);
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "day-button";
-    if (date.getMonth() !== month) button.classList.add("muted");
-    if (slotsForDate(key).length) button.classList.add("has-slots");
-    if (key === selectedDate) button.classList.add("selected");
-    button.textContent = date.getDate();
-    button.addEventListener("click", () => { selectedDate = key; selectedSlotId = ""; renderAll(); });
-    grid.append(button);
-  }
-}
-function renderClientSlots() {
-  const selectedLabel = document.querySelector("#selected-date-label");
-  const countLabel = document.querySelector("#slot-count-label");
-  const container = document.querySelector("#client-slots");
-  if (!selectedLabel || !countLabel || !container) return;
-  selectedLabel.textContent = formatDate(selectedDate);
-  const slots = slotsForDate(selectedDate);
-  countLabel.textContent = `${slots.length} open ${slots.length === 1 ? "slot" : "slots"}`;
-  container.innerHTML = "";
-  if (!slots.length) {
-    container.innerHTML = '<div class="empty">No open lesson requests on this date. Choose a day with a gold dot or reach out directly.</div>';
-  }
-  slots.forEach((slot) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = `slot-option ${selectedSlotId === slot.id ? "selected" : ""}`;
-    button.innerHTML = `<div><strong>${formatTime(slot.time)} · 1 hour</strong><span>$95 · ${slot.location}${slot.note ? ` · ${slot.note}` : ""}</span></div><span class="choose-label">Choose</span>`;
-    button.addEventListener("click", () => {
-      selectedSlotId = slot.id;
-      document.querySelector("#slot-id").value = slot.id;
-      document.querySelector("#form-note").textContent = `Selected ${formatDate(slot.date, false)} at ${formatTime(slot.time)}. Court time still needs final confirmation.`;
-      renderClientSlots();
-    });
-    container.append(button);
-  });
-}
-function renderAdmin() {
-  const list = document.querySelector("#admin-list");
-  if (!list) return;
-  list.innerHTML = "";
-  const slots = [...state.slots].sort((a, b) => `${a.date}${a.time}`.localeCompare(`${b.date}${b.time}`));
-  if (!slots.length) list.innerHTML = '<div class="empty">No open slots yet. Add your first available time.</div>';
-  slots.forEach((slot) => {
-    const row = document.createElement("article");
-    row.className = "admin-row";
-    row.innerHTML = `<strong>${formatDate(slot.date, false)} · ${formatTime(slot.time)} · 1 hour · $95 · ${slot.status}</strong><span>${slot.location}${slot.note ? ` · ${slot.note}` : ""}</span>`;
-    const actions = document.createElement("div");
-    actions.className = "row-actions";
-    const toggle = document.createElement("button");
-    toggle.type = "button";
-    toggle.className = "status-button";
-    toggle.textContent = slot.status === "open" ? "Mark Unavailable" : "Reopen";
-    toggle.addEventListener("click", () => { slot.status = slot.status === "open" ? "closed" : "open"; saveState(); renderAll(); });
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.className = "status-button danger";
-    remove.textContent = "Delete";
-    remove.addEventListener("click", () => { state.slots = state.slots.filter((item) => item.id !== slot.id); saveState(); renderAll(); });
-    actions.append(toggle, remove);
-    row.append(actions);
-    list.append(row);
-  });
-  const requests = document.querySelector("#request-list");
-  if (!requests) return;
-  requests.innerHTML = "";
-  if (!state.requests.length) requests.innerHTML = '<div class="empty">No client requests yet.</div>';
-  state.requests.forEach((request) => {
-    const slot = state.slots.find((item) => item.id === request.slotId);
-    const row = document.createElement("article");
-    row.className = "request-row";
-    row.innerHTML = `<strong>${request.athlete}</strong><span>${request.contact}</span><span>${slot ? `${formatDate(slot.date, false)} at ${formatTime(slot.time)} · ${slot.location} · 1 hour · $95` : "Slot removed"}</span><span>${request.goals || "No goal added."}</span>`;
-    requests.append(row);
-  });
-}
-function renderAll() { renderCalendar(); renderClientSlots(); renderAdmin(); }
-document.querySelector("#prev-month")?.addEventListener("click", () => { visibleMonth = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth() - 1, 1); renderCalendar(); });
-document.querySelector("#next-month")?.addEventListener("click", () => { visibleMonth = new Date(visibleMonth.getFullYear(), visibleMonth.getMonth() + 1, 1); renderCalendar(); });
-document.querySelector("#admin-form")?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const slot = { id: newId(), date: data.get("date"), time: data.get("time"), location: data.get("location"), note: data.get("note"), status: "open" };
-  state.slots.push(slot);
-  selectedDate = slot.date;
-  const parsed = parseDate(slot.date);
-  visibleMonth = new Date(parsed.getFullYear(), parsed.getMonth(), 1);
-  event.currentTarget.reset();
-  saveState();
-  renderAll();
-});
-document.querySelector("#request-form")?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const slotId = selectedSlotId || data.get("slotId");
-  if (!slotId) { document.querySelector("#form-note").textContent = "No lesson time selected yet."; return; }
-  state.requests.push({ id: newId(), slotId, athlete: data.get("athlete"), contact: data.get("contact"), goals: data.get("goals"), createdAt: new Date().toISOString() });
-  const slot = state.slots.find((item) => item.id === slotId);
-  if (slot) slot.status = "pending court confirmation";
-  selectedSlotId = "";
-  event.currentTarget.reset();
-  saveState();
-  renderAll();
-  document.querySelector("#form-note").textContent = "Request saved. Adam will confirm court time before the lesson is final.";
-});
-document.querySelector("#seed-slots")?.addEventListener("click", () => {
-  const samples = [[2, "09:30", "Passing + serve receive"], [2, "10:30", "Bring-a-friend back-to-back option"], [4, "16:00", "Tryout prep"], [6, "10:30", "Defensive movement"], [7, "13:00", "Athletic base + footwork"]];
-  samples.forEach(([days, time, note]) => {
-    const date = new Date(today.getFullYear(), today.getMonth(), today.getDate() + days);
-    state.slots.push({ id: newId(), date: toDateKey(date), time, location: "Indoor Court", note, status: "open" });
-  });
-  selectedDate = firstDateWithSlots() || selectedDate;
-  saveState();
-  renderAll();
-});
-document.querySelector("#clear-requests")?.addEventListener("click", () => {
-  state.requests = [];
-  state.slots.forEach((slot) => { if (slot.status === "pending court confirmation") slot.status = "open"; });
-  saveState();
-  renderAll();
-});
-
-document.querySelector("#lesson-format")?.addEventListener("change", (event) => {
-  const option = event.currentTarget.selectedOptions[0];
-  const priceEl = document.querySelector("#rate-mini-price");
-  const detailsEl = document.querySelector("#rate-mini-details");
-  if (option && priceEl) priceEl.textContent = option.dataset.price;
-  if (option && detailsEl) detailsEl.innerHTML = option.dataset.details;
-});
-
-document.querySelector("#availability-request-form")?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const subject = `Lesson request for ${data.get("athlete") || "athlete"}`;
-  const body = [
-    "Hi Adam,",
-    "",
-    "I would like to request a private volleyball lesson.",
-    "",
-    `Lesson format: ${data.get("format") || "Indoor"} (${document.querySelector("#lesson-format")?.selectedOptions[0]?.dataset.price || "$95"}/hr)`,
-    `Athlete name: ${data.get("athlete") || ""}`,
-    `Parent name: ${data.get("parent") || ""}`,
-    `Phone: ${data.get("phone") || ""}`,
-    `Email: ${data.get("email") || ""}`,
-    "",
-    "Preferred time windows:",
-    `1. ${data.get("window1") || ""}`,
-    `2. ${data.get("window2") || ""}`,
-    `3. ${data.get("window3") || ""}`,
-    "",
-    `Athlete level: ${data.get("level") || ""}`,
-    `Bring a friend: ${data.get("friend") || ""}`,
-    "",
-    "Lesson focus:",
-    data.get("goals") || "",
-    "",
-    "Other notes:",
-    data.get("notes") || "",
-    "",
-    "I understand court time still needs to be confirmed before the lesson is final.",
-    "",
-    "Thank you!"
-  ].join("\n");
-  const note = document.querySelector("#availability-form-note");
-  if (note) note.textContent = "Opening your email app with the request details. Send it from there so Adam can confirm court/beach availability.";
-  window.location.href = `mailto:adamwitkow2027@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
-
-initAdminGate();
-renderAll();
-</script>
-
 </body>
 </html>
